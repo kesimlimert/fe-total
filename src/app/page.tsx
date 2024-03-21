@@ -6,17 +6,16 @@ import SidePost from "./components/sidePost";
 import Advertisement from "./components/advertisement";
 
 export default async function Home() {
-  const API_URL = process.env.API_URL;
   
-  const posts = await fetch(`${API_URL}/api/posts`).then(
+  const posts = await fetch("http://localhost:3000/api/posts").then(
     (res) => res.json()
   );
 
-  const suggestions = await fetch(`${API_URL}/api/suggestions`).then(
+  const suggestions = await fetch("http://localhost:3000/api/suggestions").then(
     (res) => res.json()
   );
 
-  const sidePosts = await fetch(`${API_URL}/api/sidePosts`).then(
+  const sidePosts = await fetch("http://localhost:3000/api/sidePosts").then(
     (res) => res.json()
   );
 
